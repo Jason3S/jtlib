@@ -1,0 +1,46 @@
+{
+  "name": "jtlib",
+  "version": "0.1.0",
+  "description": "JSON Transformation Library",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "clean-build": "npm run clean && npm run build ",
+    "build": "npm run lint && echo Using TypeScript && tsc --version && tsc --pretty",
+    "test": "npm run build && mocha --compilers ts:ts-node/register --recursive src/**/*.test.ts",
+    "watch": "npm run build -- --watch",
+    "watch:test": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason3S/jtlib.git"
+  },
+  "keywords": [
+    "JSON",
+    "transformation",
+    "translation",
+    "path",
+    "jsonpath"
+  ],
+  "author": "Jason Dent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jason3S/jtlib/issues"
+  },
+  "homepage": "https://github.com/Jason3S/jtlib#readme",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.33",
+    "@types/node": "^6.0.47",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "rimraf": "^2.5.4",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.9"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
