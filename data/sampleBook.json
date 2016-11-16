@@ -1,0 +1,315 @@
+{
+    "identifiers": {
+        "librarything": [
+            "23239"
+        ],
+        "goodreads": [
+            "72013"
+        ]
+    },
+    "table_of_contents": [
+        {
+            "pagenum": "ix",
+            "level": 1,
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Preface"
+        },
+        {
+            "level": 1,
+            "label": "1",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Regulability"
+        },
+        {
+            "pagenum": "3",
+            "level": 2,
+            "label": "1",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Code is Law"
+        },
+        {
+            "pagenum": "9",
+            "level": 2,
+            "label": "2",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Four Puzzles from Cyberspace"
+        },
+        {
+            "pagenum": "24",
+            "level": 2,
+            "label": "3",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Is-Ism"
+        },
+        {
+            "pagenum": "30",
+            "level": 2,
+            "label": "4",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Architectures of Control"
+        },
+        {
+            "pagenum": "43",
+            "level": 2,
+            "label": "5",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Regulating Code"
+        },
+        {
+            "level": 1,
+            "label": "2",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Code and Other Regulaors"
+        },
+        {
+            "pagenum": "63",
+            "level": 2,
+            "label": "6",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Cyberspaces"
+        },
+        {
+            "pagenum": "85",
+            "level": 2,
+            "label": "7",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "What Things Regulate"
+        },
+        {
+            "pagenum": "100",
+            "level": 2,
+            "label": "8",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "The Limits of Open Code"
+        },
+        {
+            "level": 1,
+            "label": "3",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Applications"
+        },
+        {
+            "pagenum": "111",
+            "level": 2,
+            "label": "9",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Translation"
+        },
+        {
+            "pagenum": "122",
+            "level": 2,
+            "label": "10",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Intellectual Property"
+        },
+        {
+            "pagenum": "142",
+            "level": 2,
+            "label": "11",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Privacy"
+        },
+        {
+            "pagenum": "164",
+            "level": 2,
+            "label": "12",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Free Speech"
+        },
+        {
+            "pagenum": "186",
+            "level": 2,
+            "label": "13",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Interlude"
+        },
+        {
+            "pagenum": "188",
+            "level": 2,
+            "label": "14",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Sovereignty"
+        },
+        {
+            "level": 1,
+            "label": "4",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Responses"
+        },
+        {
+            "pagenum": "213",
+            "level": 2,
+            "label": "15",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "The Problems We Face"
+        },
+        {
+            "pagenum": "222",
+            "level": 2,
+            "label": "16",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Responses"
+        },
+        {
+            "pagenum": "231",
+            "level": 2,
+            "label": "17",
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "What Declan Doesn't Get"
+        },
+        {
+            "pagenum": "235",
+            "level": 1,
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Appendix"
+        },
+        {
+            "pagenum": "241",
+            "level": 1,
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Notes"
+        },
+        {
+            "pagenum": "289",
+            "level": 1,
+            "type": {
+                "key": "/type/toc_item"
+            },
+            "title": "Index"
+        }
+    ],
+    "covers": [
+        6621311,
+        298753
+    ],
+    "lc_classifications": [
+        "K564.C6 L47 1999"
+    ],
+    "latest_revision": 19,
+    "ocaid": "codeotherlawsofc00less",
+    "ia_box_id": [
+        "IA119501"
+    ],
+    "source_records": [
+        "marc:marc_records_scriblio_net/part01.dat:30920743:907",
+        "marc:marc_loc_updates/v36.i18.records.utf8:474137:1008",
+        "marc:marc_ithaca_college/ic_marc.mrc:170786922:939",
+        "ia:codeotherlawsofc00less"
+    ],
+    "title": "Code",
+    "languages": [
+        {
+            "key": "/languages/eng"
+        }
+    ],
+    "subjects": [
+        "Information superhighway -- Law and legislation",
+        "Computers -- Law and legislation",
+        "Electronic commerce -- Law and legislation",
+        "Freedom of information",
+        "Privacy, Right of"
+    ],
+    "publish_country": "nyu",
+    "by_statement": "Lawrence Lessig",
+    "oclc_numbers": [
+        "42860053"
+    ],
+    "type": {
+        "key": "/type/edition"
+    },
+    "revision": 19,
+    "other_titles": [
+        "Code"
+    ],
+    "publishers": [
+        "Basic Books"
+    ],
+    "description": "Examines the relation between cyberspace and government, particularly the government's ability to regulate. Contrary to popular belief, cyberspace can be regulated through architecture and its representation as code.  Government and commerce are working to regulate cyberspace, although each in a different way and for different reasons.  In the opposite direction, cyberspace challenges the basic assumptions underlying American governance.",
+    "physical_format": "Hardcover",
+    "last_modified": {
+        "type": "/type/datetime",
+        "value": "2016-10-16T02:06:37.392084"
+    },
+    "key": "/books/OL6807502M",
+    "authors": [
+        {
+            "key": "/authors/OL1518080A"
+        }
+    ],
+    "publish_places": [
+        "New York"
+    ],
+    "pagination": "xii, 297 p.",
+    "classifications": {},
+    "subtitle": "and other laws of cyberspace",
+    "created": {
+        "type": "/type/datetime",
+        "value": "2008-04-01T03:28:50.625462"
+    },
+    "lccn": [
+        "00271772"
+    ],
+    "notes": "Includes bibliographical references (p. [241]-288) and index.",
+    "number_of_pages": 297,
+    "first_sentence": "A decade ago, in the Spring of 1989, Communism in Europe died\u2014collapsed, as a tent would fall if its main post were removed.",
+    "dewey_decimal_class": [
+        "303.48/33"
+    ],
+    "isbn_10": [
+        "046503912X"
+    ],
+    "publish_date": "1999",
+    "works": [
+        {
+            "key": "/works/OL6037025W"
+        }
+    ]
+}

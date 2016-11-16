@@ -1,0 +1,24 @@
+{
+  "extends": ["tslint:recommended"],
+  "rules": {
+    "class-name": true,
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double",
+      "avoid-escape"
+    ],
+    "max-line-length": [
+      true,
+      140
+    ],
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+    "no-unused-variable": [true, "react"],
+    "object-literal-sort-keys": false,
+    "no-consecutive-blank-lines": [false, 3]
+  }
+}
