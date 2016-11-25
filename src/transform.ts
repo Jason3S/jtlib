@@ -4,24 +4,31 @@
 
 import { Json, isJsonObj, isJsonArray } from './json';
 
-export interface TransformationDefinition {
-    [field: string]: TranFn;
-    [field: number]: TranFn;
+export type TransformationDefinition = TransformationDefObj | TranDefFn | TransformationDefArray;
+
+export interface TransformationDefObj {
+    [field: string]: TransformationDefinition;
+    [field: number]: TransformationDefinition;
 }
 
-export type IndexKey = string | number;
+export interface TransformationDefArray extends Array<TransformationDefinition> {};
+
+export type IndexKey = string | number | undefined;
 
 export function parent() {
-    return create(a => a).parent();
+    return node().parent;
 }
 
 export function field(index: IndexKey) {
-    return create(a => a).field(index);
+    return node().field(index);
 }
 
-export interface Indexable<T> {
-    [key: string]: T;
-    [key: number]: T;
+export function node() {
+    return create(a => a);
+}
+
+export function index() {
+    return node().index;
 }
 
 export interface ContextItem {
@@ -31,14 +38,23 @@ export interface ContextItem {
 
 export type Context = ContextItem[];
 
+export interface TranDefFn {
+    <T>(data: Json, index?: IndexKey, context?: Context): T;
+}
 
 export interface TranFn {
-    (data?: Json, index?: IndexKey, context?: Context): Json | undefined;
+    (data: Json, index?: IndexKey, context?: Context): Json;
+}
+
+export interface MapFn<T> {
+    (data: Json, index?: IndexKey, context?: Context): T;
 }
 
 export interface TranFnT extends TranFn {
-    parent: () => TranFnT;
+    parent: TranFnT;
     field: (index: IndexKey) => TranFnT;
+    index: MapFn<IndexKey>;
+    map: <T>(fn: MapFn<T>) => MapFn<T>;
 }
 
 interface TranFnResolve {
@@ -46,7 +62,7 @@ interface TranFnResolve {
 }
 
 interface TranState {
-    data?: Json;
+    data: Json;
     index?: IndexKey;
     context: Context;
 }
@@ -54,10 +70,17 @@ interface TranState {
 
 function create(fnResolve: TranFnResolve) {
 
-    const fnTran = <TranFnT> function(data?: Json, index?: IndexKey, context: Context = []) {
+    const fnTran = <TranFnT> function(data: Json, index?: IndexKey, context: Context = []) {
         const state: TranState = fnResolve({ data, index, context });
         return state.data;
     };
+
+    function resolveMap<T>(fn: (state: TranState) => T) {
+        return function(data: Json, index?: IndexKey, context: Context = []) {
+            const state: TranState = fnResolve({ data, index, context });
+            return fn(state);
+        };
+    }
 
     fnTran.field = function(index: IndexKey) {
         return create(
@@ -72,7 +95,10 @@ function create(fnResolve: TranFnResolve) {
         );
     };
 
-    fnTran.parent = function() {
+    /**
+     * Define parent getter
+     */
+    Object.defineProperty(fnTran, 'parent', { get: function() {
         return create(
             function (stateInitial: TranState) {
                 const state = fnResolve(stateInitial);
@@ -82,6 +108,17 @@ function create(fnResolve: TranFnResolve) {
                 return { data, index, context };
             }
         );
+    } });
+
+    /**
+     * Define index getter
+     */
+    Object.defineProperty(fnTran, 'index', { get: function() {
+        return resolveMap( state => state.index );
+    } });
+
+    fnTran.map = function<T>(fn: MapFn<T>) {
+        return resolveMap( state => fn(state.data, state.index, state.context) );
     };
 
     return fnTran;
