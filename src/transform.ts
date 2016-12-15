@@ -84,36 +84,36 @@ function create(fnResolve: TranFnResolve) {
 
     fnTran.field = function(index: IndexKey) {
         return create(
-            function (stateInitial: TranState) {
+            (stateInitial: TranState) => {
                 const state = fnResolve(stateInitial);
                 const data = (isJsonObj(state.data))
                     ? state.data[index]
                     : (isJsonArray(state.data) && typeof index === 'number' ? state.data[index] : undefined);
                 const context = [{index: state.index, data: state.data}, ...state.context];
                 return { data, index, context };
-            }
+            },
         );
     };
 
     /**
      * Define parent getter
      */
-    Object.defineProperty(fnTran, 'parent', { get: function() {
+    Object.defineProperty(fnTran, 'parent', { get: () => {
         return create(
-            function (stateInitial: TranState) {
+            (stateInitial: TranState) => {
                 const state = fnResolve(stateInitial);
                 const parentState: ContextItem = state.context[0] || {index: undefined, data: undefined};
                 const {data, index} = parentState;
                 const context = state.context.slice(1);
                 return { data, index, context };
-            }
+            },
         );
     } });
 
     /**
      * Define index getter
      */
-    Object.defineProperty(fnTran, 'index', { get: function() {
+    Object.defineProperty(fnTran, 'index', { get: () => {
         return resolveMap( state => state.index );
     } });
 
