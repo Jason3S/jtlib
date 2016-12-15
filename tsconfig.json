@@ -5,6 +5,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
     "outDir": "./lib",
     "preserveConstEnums": true,
     "sourceMap": true,
