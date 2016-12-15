@@ -87,7 +87,7 @@ function create(fnResolve: TranFnResolve) {
             (stateInitial: TranState) => {
                 const state = fnResolve(stateInitial);
                 const data = (isJsonObj(state.data))
-                    ? state.data[index]
+                    ? state.data[index!]
                     : (isJsonArray(state.data) && typeof index === 'number' ? state.data[index] : undefined);
                 const context = [{index: state.index, data: state.data}, ...state.context];
                 return { data, index, context };
