@@ -19,6 +19,9 @@
     "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
     "no-unused-variable": [true, "react"],
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": [false, 3]
+    "no-consecutive-blank-lines": [false, 3],
+    "ordered-imports": [false],
+    "only-arrow-functions": [false],
+    "arrow-parens": false
   }
 }
